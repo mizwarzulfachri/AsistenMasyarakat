@@ -1,6 +1,6 @@
 <?php
 
-CREATE TABLE IF NOT EXISTS `mahasiswa` (
+CREATE TABLE IF NOT EXISTS `masyarakat` (
   `id_mahasiswa` int(50) NOT NULL AUTO_INCREMENT,
   `nama` text COLLATE latin1_general_ci NOT NULL,
   `jenis_kelamin` text COLLATE latin1_general_ci NOT NULL,

@@ -3,7 +3,7 @@ session_start();
 ?>
            
 <html>
-<title>Rully Studio | Notifikasi Data Tersimpan</title>
+<title> Notifikasi Data Tersimpan</title>
 <head>
 <link rel="stylesheet" href="style/bootstrap.min.css" />
 </head>
@@ -13,10 +13,8 @@ session_start();
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <p>
-                <center>
-                    <h2>Membuat Notifikasi Data Tersimpan</h2>
-                    Oleh : <a href="https://www.facebook.com.pendeta.mokong" target="_blank">Rully Studio</a>
-                </center>
+                 <h2>Membuat Notifikasi Data Tersimpan</h2>
+
             </p>
             <div style="height:55px;">
                  <?php

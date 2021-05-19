@@ -4,6 +4,7 @@ body {
     font-family: Helvetica, sans-serif;
     background: rgb(190, 190, 190);
 }
+
 .box {
     width: 400px;
     padding: 25px;
@@ -37,6 +38,7 @@ body {
 .box input[type="text"]:focus,.box input[type="password"]:focus,.box input[type="number"]:focus{
     width: 280px;
     border-color: darkgray;
+    border-radius: 10px;
 
 }
 .box input[type="submit"]{
@@ -54,7 +56,16 @@ body {
     transition: 0.20s;
 }
 .box input[type="submit"]:hover{
-    width: 280px;
+    width: 250px;
     border-color: darkgray;
+    border-radius: 10px;
 
+}
+.error{
+    background: #f3aaaa;
+    color: #c92b28;
+    padding: 4px;
+    width: 80%;
+    border-radius: 6px;
+    margin: 15px auto;
 }

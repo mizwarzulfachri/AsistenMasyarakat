@@ -24,7 +24,7 @@ session_start();
             <p>
                 <a class="btn btn-primary" href="tambah.php">Tambah</a>
             </p>
-            <table class="table table-bordered">
+            <table border="1px" class="table table-bordered">
                 <tr>
                     <th>
                         No
@@ -77,8 +77,10 @@ session_start();
                         <?php echo $row['alamat']; ?>
                     </td>
                     <td>
-                        <a href="hapus.php?id=<?php echo $row['id_mahasiswa']; ?>">Hapus</a>
+                        <a href="hapus.php?id=<?php echo $row['id_masyarakat']; ?>">Hapus</a> |
+                        <a href="detail.php?id=<?php echo $row['id_masyarakat']; ?>">Detail</a> 
                     </td>
+                    
                 </tr>
                 <?php
                     }

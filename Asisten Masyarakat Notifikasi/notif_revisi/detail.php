@@ -114,7 +114,9 @@ session_start();
                                             nama,
                                             jenis_kelamin,
                                             telepon,
-                                            alamat
+                                            alamat,
+                                            tempat_lahir,
+                                            tanggal
                                       from
                                       masyarakat
                                       where id_masyarakat = $_GET[id]");
@@ -152,6 +154,23 @@ session_start();
                     </td>
                     <td>
                         : <?php echo $row['alamat']; ?>
+                    </td>
+                </tr>
+                <tr>       
+                    <td>
+                      tempat_lahir
+                    </td>
+                    <td>
+                        : <?php echo $row['tempat_lahir']; ?>
+                    </td>
+                </tr>
+                <tr>       
+                    <td>
+                        tanggal
+                    </td>
+                    <td>
+                    <?php echo $row['tanggal'];?> tnggal hari ini
+                         <input type="date" name="tanggal" value="<?php echo date("Y-m-d"); ?>">
                     </td>
                 </tr>
             </table>

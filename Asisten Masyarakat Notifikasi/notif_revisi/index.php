@@ -137,6 +137,12 @@ session_start();
                         Alamat
                     </th>
                     <th>
+                    tempat_lahir
+                    </th>
+                    <th>
+                        tanggal
+                    </th>
+                    <th>
                         Opsi
                     </th>
                     <th>
@@ -151,7 +157,9 @@ session_start();
                                                                 nama,
                                                                 jenis_kelamin,
                                                                 telepon,
-                                                                alamat
+                                                                alamat,
+                                                                tempat_lahir,
+                                                                tanggal
                                                           from
                                                           masyarakat
                                                           order by id_masyarakat DESC");
@@ -174,15 +182,24 @@ session_start();
                     <td>
                         <?php echo $row['alamat']; ?>
                     </td>
+                    <td>
+                        <?php echo $row['tempat_lahir']; ?>
+                    </td>
+                    <td>
+                        <?php echo $row['tanggal'];?>
+                    </td>
+                 
                     <td class="opsi">
                         <a href="hapus.php?id=<?php echo $row['id_masyarakat']; ?>"> <button type="button">Hapus</button></a> | 
                         <a href="detail.php?id=<?php echo $row['id_masyarakat']; ?>"><button>Detail</button></a> 
                     </td>
+                    <!--
                     <td>
                         <?php echo $row['verifikasi']; ?>
                         <a href="terima.php?id=<?php echo $row['id_masyarakat']; ?>"><button type="button"> Terima</button></a> 
                         <a href="tolak.php?id=<?php echo $row['id_masyarakat']; ?>"><button> Tolak</button></a>
                     </td>
+                        -->
                 </tr>
                 <?php
                     }

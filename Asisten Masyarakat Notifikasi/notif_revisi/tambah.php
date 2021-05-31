@@ -120,6 +120,44 @@ session_start();
     <input type="text" id="telepon" name="telepon" placeholder="your phone number">
     <label for="alamat">Alamat</label>
     <input type="text" id="alamat" name="alamat">
+
+            <tr>
+              <td><label for="alamat">tempat_lahir</label></td>
+              <td>:</td>
+              <td><input type="text" id="tempat_lahir"  name="tempat_lahir" size="30" maxlength="30"></td>
+            </tr>
+            <table>
+            <tr>
+              <td>Tanggal Lahir :</td>
+              <td><select name="tgl" size="1" id="tgl">
+            <?php
+             for ($i=1;$i<=31;$i++)
+             {
+               echo "<option value=".$i.">".$i."</option>";
+             }
+            ?>
+             
+            </select>
+                <select name="bln" size="1" id="bln">
+            <?php
+             $bulan=array("","Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+             for ($i=1;$i<=12;$i++)
+             {
+               echo "<option value=".$i.">".$bulan[$i]."</option>";
+             }
+            ?>            
+            </select>
+             
+            <select name="thn" size="1" id="thn">
+            <?php
+             for ($i=1980;$i<=2000;$i++)
+             {
+               echo "<option value=".$i.">".$i."</option>";
+             }
+            ?>
+              </select></td>
+            </tr>
+        </table>
     
   
     <input type="submit" value="Submit">

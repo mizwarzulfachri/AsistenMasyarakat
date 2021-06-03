@@ -12,7 +12,7 @@
 
         $Username = validate($_POST['Username']);
         $NIK = validate($_POST['NIK']);
-        $Password = validate($_POST['Password']);
+        $Password = md5(validate($_POST['Password']));
 
         if(empty($Username)) {
             header('Location: Login.php?error=Perlu isi nama!');
@@ -35,8 +35,14 @@
                     //echo "Logged in";
                     $_SESSION['Nama'] = $row['Nama'];
                     $_SESSION['id'] = $row['ID'];
-                    header('Location: ../Asisten Masyarakat Main/Halaman Masyarakat/index.php');
-                    exit();
+
+                    if($row['Kode']==1){
+                        header('Location: ../Asisten Masyarakat Main/Main petugas.php');
+                        exit();
+                    } else {
+                        header('Location: ../Asisten Masyarakat Main/Main masyarakat.php');
+                        exit();
+                    }
                 } else {
                     header('Location: Login.php?error=Salah Nama, NIK, atau Password');
                     exit();
